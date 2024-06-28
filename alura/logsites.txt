@@ -1,0 +1,42 @@
+[200] Request https://google.com/
+[200] Request https://google.com/
+[200] Request https://google.com/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://google.com/
+[200] Request https://google.com/
+[200] Request https://google.com/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://google.com/
+[200] Request https://google.com/
+[200] Request https://google.com/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://google.com/
+[200] Request https://google.com/
+[200] Request https://google.com/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://google.com/
+[200] Request https://google.com/
+[200] Request https://google.com/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://dtnetwork.com.br/
+[200] Request https://dtnetwork.com.br/
+[28/28/2024 17:35:02][200] Request https://google.com/
+[28/28/2024 17:35:02][200] Request https://google.com/
+[28/28/2024 17:35:02][200] Request https://google.com/
+[28/28/2024 17:35:06][200] Request https://dtnetwork.com.br/
+[28/28/2024 17:35:06][200] Request https://dtnetwork.com.br/
+[28/28/2024 17:35:06][200] Request https://dtnetwork.com.br/
+[28/06/2024 17:35:18][200] Request https://google.com/
+[28/06/2024 17:35:18][200] Request https://google.com/
+[28/06/2024 17:35:18][200] Request https://google.com/
+[28/06/2024 17:35:22][200] Request https://dtnetwork.com.br/
+[28/06/2024 17:35:22][200] Request https://dtnetwork.com.br/
+[28/06/2024 17:35:22][200] Request https://dtnetwork.com.br/
