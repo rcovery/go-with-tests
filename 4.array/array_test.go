@@ -1,6 +1,8 @@
 package main
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestSum(t *testing.T) {
 	t.Run("collection of 5 numbers", func(t *testing.T) {
@@ -17,6 +19,17 @@ func TestSum(t *testing.T) {
 		numbers := []int{1, 2}
 
 		got := Sum(numbers)
+		want := 3
+
+		if got != want {
+			t.Errorf("got %d want %d given, %v", got, want, numbers)
+		}
+	})
+
+	t.Run("collection of any size with variadic function", func(t *testing.T) {
+		numbers := []int{1, 2}
+
+		got := Sum2(numbers...)
 		want := 3
 
 		if got != want {

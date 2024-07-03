@@ -1,8 +1,9 @@
 package main
 
 func main() {
-	req()
+	// req()
 	// array()
 	// constants()
 	// condition()
+	structs()
 }
