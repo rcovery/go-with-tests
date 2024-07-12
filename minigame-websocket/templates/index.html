@@ -1,0 +1,17 @@
+{{ define "Index" }}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Game</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/style.css"> -->
+</head>
+<body>
+  <div>
+    Hello {{ .Id }}!
+
+    Players registered: {{ .TotalPlayers }}
+  </div>    
+</html>
+
+{{ end }}
