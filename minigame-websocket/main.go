@@ -2,15 +2,21 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"minigame/infrastructure/db"
 	"net/http"
+	"sync"
 	"text/template"
+	"time"
+
+	"github.com/joho/godotenv"
 )
 
 var templates = template.Must(template.ParseGlob("templates/*.html"))
 
 func main() {
-	// http.HandleFunc("/ws", handleWebsocketConnections)
+	godotenv.Load(".env")
+
 	http.HandleFunc("/", Index)
 	http.HandleFunc("/api", IndexApi)
 	http.ListenAndServe(":8080", nil)
@@ -24,12 +30,26 @@ func Index(res http.ResponseWriter, req *http.Request) {
 
 func IndexApi(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(User{
-		Name: "John Doe",
+		Name: "John Doe 2",
 		Age:  25,
 	})
+
+	fmt.Println("Before async test")
+	var wg sync.WaitGroup = sync.WaitGroup{}
+	wg.Add(1)
+	go AsyncTest(&wg)
+	wg.Wait()
+	fmt.Println("After async test")
 }
 
 type User struct {
 	Name string
 	Age  int
+}
+
+func AsyncTest(wg *sync.WaitGroup) {
+	defer wg.Done()
+
+	fmt.Println("Start async test")
+	time.Sleep(2 * time.Second)
 }

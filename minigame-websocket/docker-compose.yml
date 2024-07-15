@@ -1,0 +1,18 @@
+version: '3.5'
+
+services:
+  db:
+    container_name: go-minigame-db
+    image: postgres:14.4-alpine
+    environment:
+      POSTGRES_ROOT_PASSWORD: root
+      POSTGRES_DB: root
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    ports:
+      - 8082:5432
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '256M'
