@@ -36,7 +36,11 @@ func IndexApi(w http.ResponseWriter, r *http.Request) {
 
 	fmt.Println("Before async test")
 	var wg sync.WaitGroup = sync.WaitGroup{}
-	wg.Add(1)
+	wg.Add(5)
+	go AsyncTest(&wg)
+	go AsyncTest(&wg)
+	go AsyncTest(&wg)
+	go AsyncTest(&wg)
 	go AsyncTest(&wg)
 	wg.Wait()
 	fmt.Println("After async test")
@@ -48,8 +52,13 @@ type User struct {
 }
 
 func AsyncTest(wg *sync.WaitGroup) {
-	defer wg.Done()
+	defer DoneAsyncTest(wg)
 
 	fmt.Println("Start async test")
 	time.Sleep(2 * time.Second)
+}
+
+func DoneAsyncTest(wg *sync.WaitGroup) {
+	wg.Done()
+	fmt.Println("Done async test")
 }
