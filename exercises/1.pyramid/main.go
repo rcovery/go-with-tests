@@ -23,13 +23,13 @@ func main() {
 	var n int = 9
 
 	for i := range n {
-		fmt.Println(Spaces(n, i) + Pyramid(strconv.Itoa(i+1), i))
+		fmt.Println(Spaces(n, i) + Pyramid(strconv.Itoa(i+1), i) + Spaces(n, i))
 	}
 }
 
 func Spaces(max int, quantity int) string {
 	var maxLength int = len(strconv.Itoa(max))
-	return strings.Repeat(" ", ((max - quantity - 1) * maxLength))
+	return strings.Repeat("•", ((max - quantity - 1) * maxLength))
 }
 
 func Pyramid(character string, quantity int) string {
