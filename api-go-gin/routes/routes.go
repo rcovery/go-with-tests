@@ -9,6 +9,7 @@ import (
 
 func HandleRoutes(r *gin.Engine) {
 	r.GET("/students", controllers.GetAllStudents)
+	r.POST("/students", controllers.CreateStudent)
 }
 
 func Handle404Routes(r *gin.Engine) {
