@@ -13,7 +13,7 @@ func HandleRoutes(r *gin.Engine) {
 }
 
 func Handle404Routes(r *gin.Engine) {
-	r.GET("/:allothershit", func(c *gin.Context) {
+	r.NoRoute(func(c *gin.Context) {
 		pageName := c.Params.ByName("allothershit")
 		c.JSON(404, gin.H{
 			"error":   "page.not.found",

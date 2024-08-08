@@ -13,18 +13,18 @@ func GetAllStudents(c *gin.Context) {
 }
 
 func CreateStudent(c *gin.Context) {
-	var aluno models.Student
-	if err := c.ShouldBindJSON(&aluno); err != nil {
+	var student models.Student
+
+	if err := c.ShouldBindJSON(&student); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
-			"error": err.Error(),
+			"error": "Erro ao processar os dados",
 		})
-		return
 	}
 
-	aluno.ID = ulid.Make().String()
+	student.ID = ulid.Make().String()
+	models.Alunos = append(models.Alunos, student)
 
-	models.Alunos = append(models.Alunos, aluno)
 	c.JSON(http.StatusCreated, gin.H{
-		"message": "user.created",
+		"message": "Usuário criado com sucesso!",
 	})
 }
